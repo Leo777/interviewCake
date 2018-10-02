@@ -1,6 +1,7 @@
 package com.interviewcake.algolearn;
 
-public class TemperatureTracker {
+public class
+TemperatureTracker {
     //for max and min
     private int minTemp = Integer.MAX_VALUE;
     private int maxTemp = Integer.MIN_VALUE;
