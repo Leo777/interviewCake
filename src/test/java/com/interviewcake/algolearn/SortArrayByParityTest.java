@@ -10,9 +10,9 @@ public class SortArrayByParityTest {
 
     @Test
     public void shouldSortTest(){
-        int[] numbers = {0,1,2};
+        int[] numbers = {0,1,2,3,4,5,6};
         SortArrayByParity sortArrayByParity = new SortArrayByParity();
-        sortArrayByParity.sort(numbers);
-        assertTrue(Arrays.equals(new int []{2,8,4,3},numbers));
+
+        assertTrue(Arrays.equals(new int []{0,2,1},sortArrayByParity.sortArrayByParity(numbers)));
     }
 }
