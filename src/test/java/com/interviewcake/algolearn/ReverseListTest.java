@@ -19,7 +19,7 @@ public class ReverseListTest {
         node3.next=node4;
 
         ReverseLinkedList reverseLinkedList = new ReverseLinkedList();
-        reverseLinkedList.reverseList(head);
+        head = reverseLinkedList.reverseList(head);
 
         while(head != null){
             System.out.println(head.val);
