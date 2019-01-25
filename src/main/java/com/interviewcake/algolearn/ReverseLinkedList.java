@@ -5,36 +5,21 @@ import com.interviewcake.algolearn.Model.ListNode;
 public class ReverseLinkedList {
 
     public ListNode reverseList(ListNode head) {
-        if(head != null){
-            ListNode temp = head.next;
-            ListNode val = head;
-            ListNode tail = val;
-            while (val.next != null){
-                tail = val.next;
+
+        if (head != null) {
+            ListNode preNode = null;
+            ListNode currNode = head;
+            ListNode nextNode = null;
+            while (currNode != null) {
+                nextNode = currNode.next;
+                currNode.next = preNode;
+                preNode = currNode;
+                currNode = nextNode;
             }
-            head.next = tail.next;
-            tail.next = temp;
+            head = preNode;
 
 
         }
-
-        return head;
-    }
-
-    public ListNode reverseListRecursive(ListNode head) {
-        if(head != null){
-            ListNode temp = head.next;
-            ListNode val = head;
-            ListNode tail = val;
-            while (val.next != null){
-                tail = val.next;
-            }
-            head.next = tail.next;
-            tail.next = temp;
-
-
-        }
-
         return head;
     }
 }
